@@ -4,15 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Ticketing</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- Tailwind and Daisy UI -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- custom css -->
   <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-  <header>
+<body class="bg-[#FFFFFF] font-raleway">
+  <header class="">
     <!-- Navbar -->
+    <nav class="px-36 py-14">
+      <div class="flex flex-col lg:flex-row gap-5 lg:gap-60   justify-between items-center">
+        <div>
+          <h3 class="text-4xl font-normal">P-Ticket</h3>
+        </div>
+        <div class="dropdown">
+          <!-- <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div> -->
+          <ul  class="flex gap-3 lg:gap-14">
+            <li class="text-[#b3030712B3] text-lg">Home</li>
+            <li class="text-[#b3030712B3] text-lg">About</li>
+            <li class="text-[#b3030712B3] text-lg">Destination</li>
+            <li class="text-[#b3030712B3] text-lg">Search</li>
+          </ul>
+        </div>
+        <div class="">
+          <button class="btn btn-outline  bg-[#1DD1001A] border border-solid border-[#1DD10066] text-[#1DD100] text-xl hover:text-white hover:bg-green-600 ">Bus 
+            <img src="images/bus-icon.png" alt="">
+          </button>
+        </div>
+      </div>
+    </nav>
+    
     <!-- Banner Section -->
   </header>
   <main>
@@ -22,7 +61,11 @@
   </main>
   <!-- Footer  -->
   <footer>
-    
+
   </footer>  
+
+  <!-- Scripts -->
+  <script src="scripts/utility.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
