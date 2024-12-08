@@ -41,8 +41,10 @@ for(let seat of seatsInSeatsGrid){
     //  if 4 seats are selected together by a user and phone number is given then enable the  “Apply” button for coupon code.
     if(seatsNumber >= 4 && phoneElement.value !== ''){
       removeAttributeById('coupon-btn');
+      seatsNumber === 4;
       // A user can select at max 4 seats not more than this if a user does that show them a alert message.
       if(seatsNumber > 4){
+        
         keepBackgroundColorById(seatsId);
         setElementTextById('seats-left', 36)
         setElementTextById('seats-number', 4);
@@ -80,6 +82,27 @@ for(let seat of seatsInSeatsGrid){
         alert('your coupon is not valid!')
       }
     })
+    if(seatsNumber > 0 && phoneElement.value !== ''){
+      const seatConfirmBtn = getTheElementById('seat-confirm-btn');
+      // if seatconfirmation next button is clicked user will be directed modal section all other sections will be hidden
+      seatConfirmBtn.addEventListener('click', function(){
+        hideElementById('banner-section');
+        hideElementById('offers-section');
+        hideElementById('seat-booking-section');
+        hideElementById('footer-section');
+        showElementById('modal-section');
+
+      })
+    }else{
+        showElementById('banner-section');
+        showElementById('offers-section');
+        showElementById('seat-booking-section');
+        showElementById('footer-section');
+        hideElementById('modal-section');
+      
+    }
+    
+    
     
     
 
@@ -92,6 +115,7 @@ for(let seat of seatsInSeatsGrid){
   })
   
 }
+
 
 
 

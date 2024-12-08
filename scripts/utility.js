@@ -41,6 +41,11 @@ function hideElementById(elementId){
    element.classList.add('hidden');
 }
 
+function showElementById(elementId){
+   const element = document.getElementById(elementId);
+   element.classList.remove('hidden')
+}
+
 function appendElementById(elementId, appendItemId){
    const element = document.getElementById(elementId);
    const appendElement = document.createElement(appendItemId);
