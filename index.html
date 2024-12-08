@@ -264,23 +264,25 @@
           <div  class="space-y-6">
             <p class="text-2xl text-black border-b border-dashed border-[#33030712]">Select Your Seat</p>
             <div class="w-[433px] h-[335px] bg-[#F7F8F8] rounded-xl">
-             <div class="p-8 space-y-6">
+             <div  class="p-8 space-y-6">
               <div class="flex justify-center items-center gap-20 border-b border-dashed border-[#33030712]">
-                <p class="text-black font-inter text-base flex">Seat <span id="seat-number" class="w-[23px] h-[13px] bg-[#1DD100] flex items-center justify-center rounded-md text-sm text-white" >0</span></p>
+                <p class="text-black font-inter text-base flex">Seat <span id="seats-number" class="w-[23px] h-[13px] bg-[#1DD100] flex items-center justify-center rounded-md text-sm text-white" >0</span></p>
                 <p class="text-black font-inter text-base">Class</p>
                 <p class="text-black font-inter text-base">Price</p>
               </div>
-              <div id="append-item" class="flex justify-center items-center gap-20 border-b border-dashed border-[#33030712]">
-                <p class="text-gray-500 font-inter text-base flex">C3</p>
-                <p class="text-gray-500 font-inter text-base">Economy</p>
-                <p id="price-list" class="text-gray-500 font-inter text-base">550</p>
+              <div id="append-parent">
+                <div id="append-item" class="flex justify-center items-center gap-20 border-b border-dashed border-[#33030712]">
+                  <!-- <p class="text-gray-500 font-inter text-base flex">C3</p>
+                  <p class="text-gray-500 font-inter text-base">Economy</p>
+                  <p id="price-list" class="text-gray-500 font-inter text-base">550</p> -->
+                </div>
               </div>
               <div class="flex justify-between items-center border-t border-solid border-[#33030712]">
                 <p class="font-inter text-black font-medium text-base">Total Price</p>
                 <p id="total-price" class="font-inter text-black font-medium text-base">BDT 0</p>
               </div>
-              <div class="w-[369px] h-[56px] bg-white rounded-xl flex justify-between items-center p-5">
-                <input class="font-inter text-sm text-gray-300" type="text" placeholder="Have any copupon?">
+              <div id="hide-after-valid-coupon" class="w-[369px] h-[56px] bg-white rounded-xl flex justify-between items-center p-5">
+                <input id="coupon-text" class="font-inter text-sm text-gray-300" type="text" placeholder="Have any copupon?">
                 <button id="coupon-btn" class="btn bg-[#1DD100] text-white font-inter text-base font-semibold disabled">Apply</button>
               </div>
               <div class="flex justify-between items-center ">
@@ -312,7 +314,7 @@
                     Phone Number<span class="text-red-500">*</span>
                   </label>
                   <input 
-                    type="text" 
+                    type="number" 
                     id="phone-number" 
                     name="phone-number" 
                     placeholder="Enter your phone number"
@@ -337,7 +339,7 @@
                 <div class="mb-4">
                   <button 
                     type="submit"
-                    class="w-full h-[71px] bg-[#1DD100] text-white font-medium py-2 rounded-2xl hover:bg-green-600  disabled">
+                    class="w-full h-[71px] bg-[#1DD100] text-white font-medium py-2 rounded-2xl hover:bg-green-600  disabled" id="seat-confirm-btn">
                     Next
                   </button>
                 </div>
