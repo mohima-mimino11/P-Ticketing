@@ -72,7 +72,7 @@ for(let seat of seatsInSeatsGrid){
         let grandTotalPrice = totalPrice - discountedPrice;
         setElementTextById('grand-total-price', Math.round(grandTotalPrice));
         hideElementById('hide-after-valid-coupon');
-      }else if(couponTextElement.value === 'Couple20'){
+      }else if(couponTextElement.value === 'Couple20' ){
         const discountedPrice = totalPrice * (20 / 100);
         let grandTotalPrice = totalPrice - discountedPrice;
         setElementTextById('grand-total-price', Math.round(grandTotalPrice));
@@ -82,8 +82,9 @@ for(let seat of seatsInSeatsGrid){
         alert('your coupon is not valid!')
       }
     })
+    const seatConfirmBtn = getTheElementById('seat-confirm-btn');
     if(seatsNumber > 0 && phoneElement.value !== ''){
-      const seatConfirmBtn = getTheElementById('seat-confirm-btn');
+      
       // if seatconfirmation next button is clicked user will be directed modal section all other sections will be hidden
       seatConfirmBtn.addEventListener('click', function(){
         hideElementById('banner-section');
@@ -91,14 +92,21 @@ for(let seat of seatsInSeatsGrid){
         hideElementById('seat-booking-section');
         hideElementById('footer-section');
         showElementById('modal-section');
-
+         
       })
     }else{
+      
         showElementById('banner-section');
         showElementById('offers-section');
         showElementById('seat-booking-section');
         showElementById('footer-section');
-        hideElementById('modal-section');
+        // hideElementById('modal-section');
+        setTimeout(function () {
+          hideElementById('modal-section');
+        }, 120000);
+
+      
+        
       
     }
     
